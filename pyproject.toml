@@ -1,0 +1,36 @@
+[project]
+name = "linkedin-llm"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "numpy",
+    "matplotlib",
+    "pandas>=2.2.3",
+    "streamlit>=1.39.0",
+    "plotly>=5.24.1",
+    "protobuf<=3.20.3",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.uv]
+dev-dependencies = [
+    "jupyter>=1.1.1",
+    "flake8-pyproject>=1.2.3",
+]
+
+[tool.flake8]
+max-line-length = 120
+
+[tool.black]
+line-length = 120
+
+[tool.isort]
+profile = "black"
+
+[tool.hatch.build.targets.wheel]
+packages = ["linkedin_llm"]

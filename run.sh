@@ -1,0 +1,1 @@
+docker run -d --name linkedin-llm --restart=always -v "$(pwd)/tmp/:/app/tmp/" -p 8601:8601 --network=host linkedin-llm:v1 streamlit run app.py --server.port=8601
