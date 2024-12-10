@@ -1,7 +1,7 @@
 import os
 from swarm import Agent
 
-from tools.web_search import web_search
+from .tools.web_search import web_search
 
 OPENAI_API_KEY = os.environ['OPENAI_API_KEY']
 os.environ['OPENAI_API_KEY'] = OPENAI_API_KEY
