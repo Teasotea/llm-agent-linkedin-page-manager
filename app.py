@@ -7,10 +7,14 @@ from swarm import Swarm
 from linkedin_llm_agent.post_generation import skeleton_writer_agent
 
 client = Swarm()
+STARTING_AGENT = skeleton_writer_agent
 
 # Initialize chat history
 if "history" not in st.session_state:
     st.session_state.history = []
+
+if "agent" not in st.session_state:
+    st.session_state.agent = STARTING_AGENT
 
 def display_assistant_message(message):
     with st.chat_message(message["role"]):
@@ -49,7 +53,7 @@ def display_message(message):
 def run_agent(user_prompt):
     history = st.session_state.history
     response = client.run(
-        agent=skeleton_writer_agent,
+        agent=st.session_state.agent,
         messages=history,
     )
     return response
@@ -73,4 +77,5 @@ if prompt := st.chat_input():
     st.session_state.history.append({"role": "user", "content": prompt})
 
     response = run_agent(prompt)
+    st.session_state.agent = response.agent
     add_response_to_history(response)
