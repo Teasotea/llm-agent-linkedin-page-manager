@@ -27,9 +27,9 @@ def display_assistant_message(message):
                     st.code(tool_call['function']['arguments'], language="json")
 
 def display_tool_message(message):
-    with st.chat_message(message["role"]):
-        st.subheader("🔧 " + message["tool_name"])
-        st.markdown(message["content"])
+    with st.chat_message(message["role"], avatar="🔧"):
+        with st.expander("Tool Output: " + message["tool_name"]):
+            st.markdown(message["content"])
 
 def display_user_message(message):
     with st.chat_message(message["role"]):
