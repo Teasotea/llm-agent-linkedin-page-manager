@@ -36,15 +36,22 @@ class LinkedinInfo:
         return result
 
 def get_linkedin_profile_info(profile_url: str) -> str:
+    """
+    Retrieves and formats information from a LinkedIn profile.
+
+    Args:
+        profile_url (str): The URL of the LinkedIn profile to fetch information from.
+
+    Returns:
+        str: A formatted string containing the summary, headline, experience, volunteering, and projects.
+        details of the LinkedIn profile.
+    """
     profile = LinkedinInfo(profile_url)
     result = f"""
     Summary: {profile.get_summary()}
     Headline: {profile.get_headline()}
     Experience: {profile.get_experience()}
+    Volunteering: {profile.get_volunteer()}
+    Projects: {profile.get_projects()}
     """
-    #     Volunteer: {profile.get_volunteer()}
-    # Projects: {profile.get_projects()}
     return result
-
-# GET a profile
-# profile = LinkedinInfo("https://www.linkedin.com/in/sofiia-shaposhnikova/")
