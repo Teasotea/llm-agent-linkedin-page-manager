@@ -8,7 +8,6 @@ COPY requirements.txt .
 
 # Install the project's dependencies
 RUN pip install --no-cache-dir -r requirements.txt
-RUN pip install git+https://github.com/openai/swarm.git
 
 # Then, add the rest of the project source code and install it
 # Installing separately from its dependencies allows optimal layer caching
