@@ -194,3 +194,4 @@ yarl==1.9.4
 streamlit==1.40.0
 python-dotenv==1.0.1
 tavily-python==0.5.0
+git+https://github.com/openai/swarm.git
