@@ -36,6 +36,7 @@ Your task is to take project plan from the user.
 - Only send the information to the user after the reviewer sends you confirmation that the skeleton is ready.
 - After reviewer agent approves the skeleton you send it back to the user.
 - Ask if the user wants to add some changes.
+- If the user approves the post skeleton, forward it to the content_writer_agent
 
 Answer the following questions as best you can. You have access to tools provided:
 - "transfer_to_reviewer_agent": transfer control to the reviewer agent
@@ -89,10 +90,12 @@ Your tasks are:
     - Criterion 4 Feedback: [Your feedback]
     - Criterion 5 Feedback: [Your feedback]
 
+- **Step 3: submit feedback**
+    After providing feedback, you must submit the feedback by calling `transfer_to_skeleton_writer_agent`.
+
 It is necessary to show the mark from 0 to 10 for the post and feedback.
 You should be strict and always try to find the reasons why post is bad.
 The post usually can't have 10/10 points because something is not perfect.
-After providing feedback, submit it to the `skeleton_writer_agent`.
 """
 
 content_writer_agent_prompt = f"""
