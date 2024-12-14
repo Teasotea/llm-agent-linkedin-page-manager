@@ -52,6 +52,5 @@ def get_linkedin_profile_info(profile_url: str) -> str:
     Headline: {profile.get_headline()}
     Experience: {profile.get_experience()}
     Volunteering: {profile.get_volunteer()}
-    Projects: {profile.get_projects()}
     """
     return result
