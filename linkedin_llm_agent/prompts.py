@@ -181,3 +181,34 @@ Your tasks are:
 
 Post content to evaluate:
 """
+
+
+extracting_key_features_from_link_info = """
+    Based on the information about the user generate the answers for the following questions:
+    1) What are your key-words?
+    2) What you're already known for?
+    3) What do people come to you for?
+    4) What do you want to be known for?
+    You have to be concise and precise.
+    ===
+    Info about the user: {}
+    """
+
+system_prompt_for_onbording = """
+Imagine yourself as a LinkedIn content creator. You are writing about <{}>.
+Your posts may contain references for your professional experience.
+===
+Info about the user: {}
+"""
+
+idea_generation_prompt=f"""
+Give me a list of 10 ideas for posts for Linkedin Page that should be easily represented under 200 words and related to my work experience. Avoid generalized ideas.
+Each ideas should be represented as two sentences. First sentence should contain an topic of the post under 10 words.
+Second sentence should contain short description of this topic under 20 words
+Separate each idea with ;
+Examples of ideas: 
+1. Make a post about Safe VS secure for AI. Tell about the difference and tools to make your AI model safe and secure.
+2. Java SE 2024 update. Tell how it affects coding experience in Java
+3. How we set up our frontend team . Framework we choose and challanges we faced
+4. Digital signature and electornic signature. Analysis of comparision and security of both
+"""
