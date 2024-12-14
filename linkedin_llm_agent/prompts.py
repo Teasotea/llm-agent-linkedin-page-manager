@@ -183,7 +183,7 @@ Post content to evaluate:
 """
 
 
-extracting_key_features_from_link_info = """
+get_key_features_from_user_info_prompt = """
     Based on the information about the user generate the answers for the following questions:
     1) What are your key-words?
     2) What you're already known for?
@@ -194,7 +194,7 @@ extracting_key_features_from_link_info = """
     Info about the user: {}
     """
 
-system_prompt_for_onbording = """
+system_onboarding_prompt = """
 Imagine yourself as a LinkedIn content creator. You are writing about <{}>.
 Your posts may contain references for your professional experience.
 ===
