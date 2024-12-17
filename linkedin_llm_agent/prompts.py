@@ -205,10 +205,11 @@ idea_generation_prompt=f"""
 Give me a list of 10 ideas for posts for Linkedin Page that should be easily represented under 200 words and related to my work experience. Avoid generalized ideas.
 Each ideas should be represented as two sentences. First sentence should contain an topic of the post under 10 words.
 Second sentence should contain short description of this topic under 20 words
-Separate each idea with ;
+Separate each idea with ';' sign 
+Do not numerate ideas
 Examples of ideas: 
-1. Make a post about Safe VS secure for AI. Tell about the difference and tools to make your AI model safe and secure.
-2. Java SE 2024 update. Tell how it affects coding experience in Java
-3. How we set up our frontend team . Framework we choose and challanges we faced
-4. Digital signature and electornic signature. Analysis of comparision and security of both
+Make a post about Safe VS secure for AI. Tell about the difference and tools to make your AI model safe and secure.;
+Java SE 2024 update. Tell how it affects coding experience in Java;
+How we set up our frontend team . Framework we choose and challanges we faced;
+Digital signature and electornic signature. Analysis of comparision and security of both;
 """

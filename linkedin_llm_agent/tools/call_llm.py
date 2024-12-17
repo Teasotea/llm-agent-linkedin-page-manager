@@ -2,9 +2,10 @@ from typing import Optional
 
 from openai import OpenAI, NotGiven, NOT_GIVEN
 
-#from linkedin_llm_agent.setup import model
-model = "gpt-4o-mini"
-client = OpenAI()
+from linkedin_llm_agent.setup import model
+
+from dotenv import load_dotenv
+load_dotenv()
 
 chat_gpt_client = OpenAI()
 
