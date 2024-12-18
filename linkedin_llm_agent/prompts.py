@@ -44,6 +44,7 @@ Your task is to take project plan from the user.
 - If the user approves the post skeleton, forward it to the content_writer_agent
 
 Answer the following questions as best you can. You have access to tools provided:
+- "transfer_to_reviewer_agent": transfer control to the reviewer agent
 - "submit_skeleton_for_review": get professional review of the skeleton
 - "web_search": search the web for information
 
@@ -126,7 +127,6 @@ Your task is to create engaging, concise posts based on a given post skeleton.
 - Always return the revised post directly without additional comments.
 - End the workflow with "Good luck with publishing!" only after the post is finalized and approved.
 - After writing the post, send it to the `content_evaluator_agent` for scoring and feedback.
-- If the evaluator's score is less than 5, rewrite the post based on their feedback and send it back for reevaluation. Repeat this loop until the score is 5 or above.
 
 End with "Evaluate this post with Content Evaluator Agent"
 """
