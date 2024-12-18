@@ -1,6 +1,26 @@
-# llm-agent-linkedin-page-manager
+# Agentify: AI SMM Manager
 
 Project for LLM Agents MOOC Hackathon hosted by Berkeley (<https://rdi.berkeley.edu/llm-agents-hackathon/>)
+
+## Structure
+
+```mermaid
+graph LR
+
+LinedIn_URL[/LinedIn_URL/] --> Idea_Generation_Agent
+Idea_Generation_Agent --> Post_Idea_1[/Post_Idea_1/]
+Idea_Generation_Agent --> Post_Idea_2[/Post_Idea_2/]
+Idea_Generation_Agent --> Post_Idea_3[/Post_Idea_3/]
+
+Post_Idea_2[/Post_Idea_2/] -----> Skeleton_Writer_Agent
+Skeleton_Writer_Agent --> WEB_search_tool
+Skeleton_Writer_Agent --> Skeleton_Reviewer_Agent
+Skeleton_Reviewer_Agent --> Skeleton_Writer_Agent
+
+Skeleton_Writer_Agent --> Content_Writer_Agent
+Content_Writer_Agent --> Content_Reviewer_Agent
+Content_Reviewer_Agent --> Content_Writer_Agent
+```
 
 ## Setup
 
