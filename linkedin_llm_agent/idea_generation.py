@@ -1,6 +1,6 @@
-from tools.call_llm import *
-from prompts import *
-from tools.get_linkedin_profile_info import *
+from .tools.call_llm import *
+from .prompts import *
+from .tools.get_linkedin_profile_info import *
 
 
 

@@ -1,5 +1,7 @@
 import os
 from linkedin_api import Linkedin
+from dotenv import load_dotenv
+load_dotenv()
 
 # Authenticate using any LinkedIn user account credentials in Notion/Important info
 LINKEDIN_MAIL = os.environ['LINKEDIN_MAIL']
